@@ -286,7 +286,13 @@
 #include <string>
 #include <vector>
 
-static const std::string version( "2.0.0 rc1" );                            ///< Version string.
+static const std::string version( "2.0.0_rc1" );                            ///< Version string.
+
+#if (64 == _ENV_BITS)
+static const std::string build( "x86_64" );                                 ///< Build string.
+#elif (32 == _ENV_BITS)
+static const std::string build( "i386" );                                   ///< Build string.
+#endif
 
 env_word_type useTileSize( 1 );                                             ///< Tile size usage.
 
@@ -698,7 +704,7 @@ int main( int argc, char *argv[] )
     // show version information
     else if ( options.end() != std::find( options.begin(), options.end(), "--version" ) )
     {
-        std::cout << "solver " << version << " " << __DATE__ << " " << __TIME__ << std::endl;
+        std::cout << "solver " << version << " " << build << " " << __DATE__ << " " << __TIME__ << std::endl;
         std::cout << "Copyright (C) 2015-2017 Randy Blankley" << std::endl;
         std::cout << "This is free software; see the source for copying conditions. There is NO" << std::endl;
         std::cout << "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE." << std::endl;

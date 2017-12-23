@@ -25,7 +25,7 @@ Just open the project in Studio and build. I use the community 2015 version and 
 
 Configure and make the project. I use whatever GCC that comes with Ubuntu 14.04.
 ~~~~
-autoreconf -vfi
+./autogen.sh
 ./configure
 make
 ~~~~
@@ -47,7 +47,7 @@ Of course your mileage may vary...
 
 Set your toolchain up when configuring the project. Example:
 ~~~~
-autoreconf -vfi
+./autogen.sh
 ./configure --host=arm-linux-gnueabihf
 make
 ~~~~
