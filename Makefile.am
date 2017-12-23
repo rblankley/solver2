@@ -1,0 +1,11 @@
+ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS} -I m4
+
+SUBDIRS = src
+
+README: README.md
+	pandoc -f markdown -t plain --wrap=none $< -o $@
+
+CLEANFILES = README
+
+@DX_RULES@
+MOSTLYCLEANFILES = $(DX_CLEANFILES)

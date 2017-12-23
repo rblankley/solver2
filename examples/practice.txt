@@ -1,0 +1,30 @@
+// practice.txt
+//
+// This 4x4 puzzle originated from the practice puzzle found on the Eternity 2
+// website. There are 640 solutions to this puzzle.
+//
+
+// 1 = orange cross
+// 2 = blue flower
+// 3 = dark purple cross
+// 4 = light purple cross
+
+0 0 1 2
+1 0 2 3
+2 0 1 3
+1 0 0 1
+
+0 2 3 2
+3 3 4 4
+4 3 3 3
+3 1 0 1
+
+0 2 4 2
+4 4 3 4
+3 3 4 4
+4 1 0 2
+
+0 2 1 0
+1 4 1 0
+1 4 2 0
+2 2 0 0
